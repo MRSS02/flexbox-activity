@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>FLEXBOX</title>
+    <meta name="theme-color" content="#00ffaa" />
+    <meta name="description" content="Página longa com flexbox" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body id="rickroll">
+
+<div id="titulos">
+
+<a href="#pag0" id="MAIN" onclick="change('MAIN')" name="button" class="button selected"><h1>Página Principal</h1></a>
+
+<a href="#pag1" id="QUIZ" onclick="change('QUIZ')" name="button" class="button"><h1>Quiz</h1></a>
+
+<a href="#pag2" id="UPLOAD" onclick="change('UPLOAD')" name="button" class="button"><h1>Upload</h1></a>
+
+<a href="#pag3" id="CONFESSION" onclick="change('CONFESSION')" name="button" class="button"><h1>Confissão</h1></a>
+
+<a href="#pag4" id="GETSTICKBUGGED" onclick="change('GETSTICKBUGGED')" name="button" class="button"><h1>Surpresa</h1></a>
+
+</div>
+
+<div class="pag" id="pag0">
+  <div class="pag-content">
+
+    <h1 class="content">Bem vindos!!!</h1>
+
+    <h2 class="content">Esta página tem diversas funcionalidades! <br>
+     Você pode usar o botão de scroll do mouse para navegar entre estas, <br>
+     ou clicar nos botões acima para rápida navegação.
+  </div>
+</div>
+
+<div class="pag" id="pag1">
+  <div class="pag-content">
+    <h1 class="content">Responda o que você acredita estar correto.</h1>
+
+    <div class="perguntas">
+
+    <h2>Qual a data de lançamento de Persona 5 Scramble?</h2>
+
+    <input type="month">
+
+    </div>
+
+    <div class="perguntas">
+
+    <h2>Quantos personagens existem no Super Smash Bros. de Nintendo 64 no total?</h2>
+
+    <input type="number">
+
+    </div>
+
+    <div class="perguntas">
+
+    <h2>Quem matou L no Death Note?</h2>
+
+    <input type="radio" name="brr">Ryuk</input>
+    <input type="radio" name="brr">Light</input>
+    <input type="radio" name="brr">Rem</input>
+    <input type="radio" name="brr">Misa</input>
+
+
+    </div>
+
+    <div class="perguntas">
+
+    <h2>Qual o próximo personagem 5 star para Genshin Impact?</h2>
+
+    <input type="text">
+
+    </div>
+
+
+    <button onclick="enviar('resposta')" style="margin-left: 40%; margin-right: 40%; margin-top:40px">Enviar</button>
+  </div>
+</div>
+
+<div class="pag" id="pag2">
+  <div class="pag-content">
+    <h1 class="content">Envie uma atividade para maior análise.</h1>
+
+    <input type="file" style="margin-top:20px">
+
+    <button onclick="enviar('atividade')"> Enviar </button>
+  </div>
+</div>
+
+<div class="pag" id="pag3">
+  <div class="pag-content">
+   <h1 class="content">Confesse algo sobre si mesmo em 2020.</h1>
+
+   <input type="text">
+
+   <button onclick="enviar('confissão')"> Enviar </button>
+ </div>
+</div>
+
+<div class="pag" id="pag4">
+  <div class="pag-content">
+   <div id="get">
+    <h1 class="content">Leia o título da página.</h1>
+   </div>
+ </div>
+</div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
