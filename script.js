@@ -61,10 +61,16 @@ function update() {
       buttonUpdate("GETSTICKBUGGED")
       if (!onRRpage) document.getElementById("get").innerHTML=`
       <h1 class="content">Leia o título da página.</h1>`
-      setTimeout(function(){document.getElementById("get").innerHTML=`
+
+      if (windowSize>=500)  setTimeout(function(){document.getElementById("get").innerHTML=`
       <h1 class="content" style='margin-top:0'>Leia o título da página.</h1>;
       <iframe width="500" height="500" src="stick.gif"></iframe>
-      `},5000)
+      `},5000);
+
+      else setTimeout(function(){document.getElementById("get").innerHTML=`
+      <h1 class="content" style='margin-top:0'>Leia o título da página.</h1>;
+      <iframe width=${windowSize-20} height="500" src="stick.gif"></iframe>
+      `},5000);
 
       setTimeout(function(){
         if (onRRpage) {
@@ -77,7 +83,84 @@ function update() {
   }
 }
 
+var windowSize = window.innerWidth;
+
 $(function() {
   $(window).scroll(update);
   update();
  });
+
+////////////////Quiz///////////////////
+
+
+function correctAnswers() {
+  let correct = 0;
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+
+if (document.getElementsByName("resp_1")[0].value=="2021-02" || document.getElementsByName("resp_4")[0].value.toLowerCase()=="fevereiro de 2021") {
+  correct++;
+  document.getElementsByName("resp_1")[0].style.color="green";
+}
+else {
+  document.getElementsByName("resp_1")[0].style.color="red";
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+if (document.getElementsByName("resp_2")[0].value==12) {
+  correct++;
+  document.getElementsByName("resp_2")[0].style.color="green";
+}
+else {
+  document.getElementsByName("resp_2")[0].style.color="red";
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+
+var radios = document.getElementsByName('resp_3');
+
+for (var i = 0, length = radios.length; i < length; i++) {
+  if (radios[i].checked) {
+
+    for (var w = 0, length = radios.length; w < length; w++) document.getElementById(`resp${w}`).style.color="red";
+
+      document.getElementById('resp2').style.color="green";
+    
+    if (i==2) correct++;
+
+    break;
+  }
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+  if (document.getElementsByName("resp_4")[0].value.toLowerCase()=="hu tao") {
+      correct++;
+      document.getElementsByName("resp_4")[0].style.color="green";
+  }
+  else {
+      document.getElementsByName("resp_4")[0].style.color="red";
+  }
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+
+  if (correct==4) alert(`Parabéns! Você acertou todas as 4!`);
+  else {
+      if (correct==0) alert(`Você não conseguiu nenhuma questão... :(`);
+      else {
+        if (correct==1) alert(`Você acertou 1 questão...`);
+        else alert(`Você acertou ${correct} questões!`);
+      }
+  }
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+}
