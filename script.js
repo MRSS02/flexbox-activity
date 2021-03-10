@@ -104,6 +104,7 @@ if (document.getElementsByName("resp_1")[0].value=="2021-02" || document.getElem
   document.getElementsByName("resp_1")[0].style.color="green";
 }
 else {
+  document.getElementById("respostaDaPrimeira").innerHTML="A resposta é: Fevereiro de 2021";
   document.getElementsByName("resp_1")[0].style.color="red";
 }
 
@@ -115,6 +116,7 @@ if (document.getElementsByName("resp_2")[0].value==12) {
   document.getElementsByName("resp_2")[0].style.color="green";
 }
 else {
+  document.getElementsByName("resp_2")[0].placeholder="12";
   document.getElementsByName("resp_2")[0].style.color="red";
 }
 
@@ -124,12 +126,12 @@ else {
 
 var radios = document.getElementsByName('resp_3');
 
-for (var i = 0, length = radios.length; i < length; i++) {
-  if (radios[i].checked) {
-
-    for (var w = 0, length = radios.length; w < length; w++) document.getElementById(`resp${w}`).style.color="red";
+for (var w = 0, length = radios.length; w < length; w++) document.getElementById(`resp${w}`).style.color="red";
 
       document.getElementById('resp2').style.color="green";
+
+for (var i = 0, length = radios.length; i < length; i++) {
+  if (radios[i].checked) {
     
     if (i==2) correct++;
 
@@ -146,6 +148,7 @@ for (var i = 0, length = radios.length; i < length; i++) {
       document.getElementsByName("resp_4")[0].style.color="green";
   }
   else {
+      document.getElementsByName("resp_4")[0].placeholder="Hu Tao";
       document.getElementsByName("resp_4")[0].style.color="red";
   }
 

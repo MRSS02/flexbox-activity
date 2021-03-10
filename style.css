@@ -55,29 +55,35 @@ body {
 }
 
 
+@media only screen and (max-width: 1000px) {
+    #titulos .button {
+        font-size: 10px;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     #titulos .button {
-        font-size: small;
+        font-size: 9px;
     }
 }
 
 @media only screen and (max-width: 550px) {
     #titulos .button {
-        font-size: xx-small;
+        font-size: 5px;
         padding: 7px;
     }
 }
 
 @media only screen and (max-width: 380px) {
     #titulos .button {
-        font-size: xx-small;
-        padding: 5px;
+        font-size: 5px;
+        padding: 7px;
     }
 }
 
 @media only screen and (max-width: 360px) {
     #titulos .button {
-        font-size: xx-small;
-        padding: 1px;
+        font-size: 5px;
+        padding: 7px;
     }
 }
