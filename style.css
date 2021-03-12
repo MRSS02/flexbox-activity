@@ -1,6 +1,7 @@
 body {
-    background-image: linear-gradient(#a95aec, #40e0d0, #ffb6c1);
+    background-color: #00FFAA;
     background-size: cover;
+    overflow-x: hidden;
 }
 
 #titulos {
@@ -39,6 +40,7 @@ body {
 }
 
 .pag {
+    font-size: 1vw;
     margin: 0px;
     text-align: center;
     height: 100vh;
@@ -54,14 +56,31 @@ body {
     align-items: center;
 }
 
+.gradiente0 {
+    background-color: red;
+    background-size:cover;
+    transition: background-color 2s;
+}
+
+@media only screen and (max-width: 1200px) {
+    #titulos .button {
+        font-size: 10px;
+    }
+    .pag {
+        font-size: 1.5vw;
+    }
+}
 
 @media only screen and (max-width: 1000px) {
     #titulos .button {
         font-size: 10px;
     }
+    .pag {
+        font-size: 1.7vw;
+    }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 780px) {
     #titulos .button {
         font-size: 9px;
     }
@@ -71,6 +90,9 @@ body {
     #titulos .button {
         font-size: 5px;
         padding: 7px;
+    }
+    .pag {
+        font-size: 1.8vw;
     }
 }
 

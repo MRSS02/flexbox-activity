@@ -28,33 +28,30 @@ function update() {
      buttonUpdate("MAIN")
      document.getElementById("get").innerHTML=`
      <h1 class="content">Leia o título da página.</h1>`
+     document.body.style="background-color: #00FFAA ; transition: background-color 1s";
+
      onRRpage = false
-     document.body.style=`
-     background-image: linear-gradient(#a95aec, #40e0d0, #ffb6c1); background-size:cover;`
    }
    else if (window_top < pag2_top * (0.8)) {
      buttonUpdate("QUIZ")
      document.getElementById("get").innerHTML=`
      <h1 class="content">Leia o título da página.</h1>`
      onRRpage = false
-     document.body.style=`
-     background-image: linear-gradient(#a95aec, #40e0d0, #ffb6c1); background-size:cover;`
+     document.body.style="background-color: lightblue ; transition: background-color 1s";
    }
    else if (window_top < pag3_top * (0.9)) {
      buttonUpdate("UPLOAD")
      document.getElementById("get").innerHTML=`
      <h1 class="content">Leia o título da página.</h1>`
      onRRpage = false
-     document.body.style=`
-     background-image: linear-gradient(#a95aec, #40e0d0, #ffb6c1); background-size:cover;`
+     document.body.style="background-color: salmon ; transition: background-color 1s";
    }
    else if (window_top < pag4_top * (0.9)) {
        buttonUpdate("CONFESSION")
        document.getElementById("get").innerHTML=`
        <h1 class="content">Leia o título da página.</h1>`
        onRRpage = false
-       document.body.style=`
-       background-image: linear-gradient(#a95aec, #40e0d0, #ffb6c1); background-size:cover;`
+       document.body.style="background-color: violet ; transition: background-color 1s";
    }
    else {
       onRRpage = true
